@@ -1,0 +1,8 @@
+FROM alpine:edge
+MAINTAINER klesogor
+RUN apk add --no-cache openjdk8
+RUN mkdir -p /var/www/spring-app
+ADD target/yet-another-lab-lab.jar /var/www/spring-app
+ENTRYPOINT ["/usr/bin/java"]
+CMD ["-jar", "/var/www/spring-app/yet-another-lab-lab.jar"]
+EXPOSE 80

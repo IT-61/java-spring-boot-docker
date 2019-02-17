@@ -1,0 +1,4 @@
+FROM mysql:5.7
+
+ADD ./docker/mysql.cnf /etc/mysql/conf.d/mysql.cnf
+RUN chmod 644 /etc/mysql/conf.d/mysql.cnf

@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+        spring-app:
+                depends_on:
+                  - db
+                container_name: spring-app
+                build:
+                        context: ./
+                        dockerfile: ./docker/spring.docker
+                volumes:
+                        - ./:/usr/src/app
+                ports:
+                        - "8080:80"
+                networks:
+                        - default
+                environment:
+                        DB_HOST: spring-db:3306
+        db:
+                container_name: spring-db
+                build:
+                        context: ./
+                        dockerfile: ./docker/database.docker
+                volumes:
+                        - db_data:/var/lib/mysql
+                environment:
+                        MYSQL_ROOT_PASSWORD: secret
+                        MYSQL_DATABASE: springdb
+                ports:
+                        - "33061:3306"
+volumes:
+        db_data:
