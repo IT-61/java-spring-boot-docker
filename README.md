@@ -11,3 +11,5 @@ Upon starting it will compile your project and install all dependencies(via entr
 After compiling your project will start and will be available at your localhost port 8080.  
 To test your instalation, please visit *localhost:8080/hello*. You should recive hello world message from docker.
 Happy coding! 
+
+**WARNING! To re-compile your code, you MUST restart the container. I'm currently trying to solve this problem. **
