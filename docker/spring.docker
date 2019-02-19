@@ -1,9 +1,6 @@
 FROM alpine:edge
 MAINTAINER klesogor
-ADD src /usr/src/app/src
-ADD pom.xml /usr/src/app
 WORKDIR /usr/src/app
-RUN apk update && apk add --no-cache openjdk8 maven && mvn package && ls target -al && mkdir -p /var/www/spring-app && cp ./target/yet-another-lab-lab.jar /var/www/spring-app
-ENTRYPOINT ["/usr/bin/java"]
-CMD ["-jar", "/var/www/spring-app/yet-another-lab-lab.jar"]
+RUN apk update && apk add --no-cache openjdk8 maven
+CMD ["/usr/src/app/docker/entrypoint.sh"]
 EXPOSE 80
