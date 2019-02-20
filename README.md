@@ -6,15 +6,10 @@ Basic spring installation with DB(good old MySql) and docker-compose support bas
 - installed docker-compose
 
 **How to use**  
-You can run it with *docker-compose up* or *docker-compose up -d* or *docker-compose up -d --build*.  
-Upon starting it will compile your project and install all dependencies(via entrypoint script). 
-After compiling your project will start and will be available at your localhost port 8080.  
-<<<<<<< HEAD
-To test your instalation, please visit *localhost:8080/hello*. You should recive hello world message from docker.
-Happy coding! 
+- You can run it with *docker-compose up* or *docker-compose up -d* or *docker-compose up -d --build*.  
+- Upon starting it will compile your project and install all dependencies(via entrypoint script). 
+- After compiling your project will start and will be available at your localhost port 8080.   
+- Alternatively, you can use makefile commands to build and recompile project.  
+- To test your instalation, please visit *localhost:8080/hello*. You should recive hello world message from docker.
 
-**WARNING! To re-compile your code, you MUST restart the container. I'm currently trying to solve this problem. **
-=======
-Alternatively, you can use makefile commands to build and recompile project.g  
 **Happy coding!** 
->>>>>>> feature/maven-cache
